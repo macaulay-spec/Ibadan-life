@@ -1,0 +1,33 @@
+{
+	"FileVersion": 3,
+	"EngineAssociation": "5.4",
+	"Category": "Games",
+	"Description": "IBADAN LIFE — a persistent, 3D, open-world, multiplayer Nigerian life simulation. Mobile-first (mid-range Android). Your city. Your hustle. Your story.",
+	"Modules": [
+		{
+			"Name": "IbadanLife",
+			"Type": "Runtime",
+			"Phase": "Default",
+			"AdditionalDependencies": [
+				"GameplayAbilities",
+				"GameplayTags",
+				"GameplayTasks",
+				"UMG",
+				"NetCore",
+				"OnlineSubsystem",
+				"OnlineSubsystemUtils",
+				"HTTP",
+				"Json",
+				"ChaosVehicles"
+			]
+		}
+	],
+	"Plugins": [
+		{ "Name": "GameplayAbilities", "Enabled": true },
+		{ "Name": "ChaosVehicles", "Enabled": true },
+		{ "Name": "UMG", "Enabled": true },
+		{ "Name": "OnlineSubsystemEOS", "Enabled": true },
+		{ "Name": "WorldPartition", "Enabled": true }
+	],
+	"SupportedTargetPlatforms": ["Android", "IOS", "Win64"]
+}

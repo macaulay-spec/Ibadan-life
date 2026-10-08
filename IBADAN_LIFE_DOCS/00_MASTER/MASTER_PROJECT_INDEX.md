@@ -57,6 +57,7 @@ Status: ✅ Complete · 🚧 In progress · 📋 Planned (phase)
 - ✅ BRAND_AND_TONE_OF_VOICE.md *(new — the rebrand)*
 - ✅ ONBOARDING_GUIDE.md *(new — start here)*
 - ✅ PROJECT_TAKEOVER_PLAN.md *(new — the programme)*
+- ✅ REPOSITORY_STRUCTURE.md *(new — where everything lives)*
 
 ### 01_PRODUCT (Tier 0)
 - ✅ PROJECT_CHARTER.md
