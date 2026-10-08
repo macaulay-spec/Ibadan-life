@@ -1,0 +1,49 @@
+name: Docs CI
+
+# Keeps the IBADAN LIFE documentation honest: no empty stubs, key files present.
+
+on:
+  push:
+    paths:
+      - "IBADAN_LIFE_DOCS/**"
+      - ".github/workflows/docs-ci.yml"
+  pull_request:
+    paths:
+      - "IBADAN_LIFE_DOCS/**"
+      - ".github/workflows/docs-ci.yml"
+
+jobs:
+  check:
+    name: Documentation integrity
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: No empty stubs remain
+        run: |
+          if grep -rl "Status:\*\* Stub" IBADAN_LIFE_DOCS --include="*.md"; then
+            echo "::error::Found stub documents that must be completed."
+            exit 1
+          fi
+          echo "No stubs found."
+
+      - name: Core navigation docs exist
+        run: |
+          for f in \
+            IBADAN_LIFE_DOCS/README.md \
+            IBADAN_LIFE_DOCS/00_MASTER/MASTER_PROJECT_INDEX.md \
+            IBADAN_LIFE_DOCS/00_MASTER/ONBOARDING_GUIDE.md \
+            IBADAN_LIFE_DOCS/00_MASTER/BRAND_AND_TONE_OF_VOICE.md \
+            IBADAN_LIFE_DOCS/00_MASTER/PROJECT_TAKEOVER_PLAN.md; do
+            test -f "$f" || { echo "::error::Missing $f"; exit 1; }
+          done
+          echo "Core docs present."
+
+      - name: Every doc has a North Star line
+        run: |
+          missing=0
+          for f in $(find IBADAN_LIFE_DOCS -name "*.md" ! -path "*/ADR/*"); do
+            grep -q "North Star" "$f" || { echo "Missing North Star: $f"; missing=1; }
+          done
+          exit $missing

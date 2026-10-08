@@ -1,0 +1,80 @@
+# ============================================================================
+# IBADAN LIFE — backend Kubernetes deployment + service
+# Secrets (database-url, jwt-secret, admin-token) come from a Secret named
+# `ibadan-life-secrets`. Create it out-of-band; never commit real secrets.
+# ============================================================================
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ibadan-life-backend
+  labels:
+    app: ibadan-life-backend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: ibadan-life-backend
+  template:
+    metadata:
+      labels:
+        app: ibadan-life-backend
+    spec:
+      containers:
+        - name: backend
+          image: ibadan-life-backend:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 3000
+          env:
+            - name: NODE_ENV
+              value: production
+            - name: PORT
+              value: "3000"
+            - name: DB_DRIVER
+              value: postgres
+            - name: DATABASE_URL
+              valueFrom:
+                secretKeyRef:
+                  name: ibadan-life-secrets
+                  key: database-url
+            - name: JWT_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: ibadan-life-secrets
+                  key: jwt-secret
+            - name: ADMIN_TOKEN
+              valueFrom:
+                secretKeyRef:
+                  name: ibadan-life-secrets
+                  key: admin-token
+          readinessProbe:
+            httpGet:
+              path: /api/health
+              port: 3000
+            initialDelaySeconds: 5
+            periodSeconds: 10
+          livenessProbe:
+            httpGet:
+              path: /api/health
+              port: 3000
+            initialDelaySeconds: 15
+            periodSeconds: 20
+          resources:
+            requests:
+              cpu: 100m
+              memory: 128Mi
+            limits:
+              cpu: 500m
+              memory: 512Mi
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: ibadan-life-backend
+spec:
+  selector:
+    app: ibadan-life-backend
+  ports:
+    - port: 80
+      targetPort: 3000
+  type: ClusterIP
