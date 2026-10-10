@@ -52,6 +52,8 @@
 
 The sample reward, item and price values are balancing placeholders—not a claim about current Ibadan prices. The offline vertical slice is intentionally labelled **Solo prototype**. There are no simulated online people and no claims of shared persistence.
 
+The working first-area recommendation is a compact Sango T-junction core (roughly 0.8 × 1.0 km), with short road runs on Polytechnic Road and Ijokodo Road and only a few curated activity places. The boundary and venue locations remain provisional pending GIS/local review. UI First Gate and Agbowo are later expansion candidates; they are not part of the current road clip.
+
 ### Core loop
 
 `Enter city → orient → choose a physical activity → complete a task / social interaction → earn or spend → manage needs and belongings → explore / return to a safe place → persist progress`
@@ -64,7 +66,7 @@ A new player can, without instructions beyond the first prompt: move, rotate the
 
 | System | First browser slice | Later persistent-world target |
 |---|---|---|
-| World | One connected Sango–UI/Agbowo road/foot corridor, landmarks and enterable service point | Streamed multiple districts and inter-area transit |
+| World | One compact, curated Sango-core road loop, a few activity places and one enterable service point | Reviewed connected expansions toward UI/Agbowo and other districts |
 | Character | One rigged base body, a small original appearance/clothing set, walk/run/idle/interact | Expanded hair, clothing, accessories, body/face options and wardrobe storage |
 | Camera/input | Third-person, keyboard/mouse plus touch joystick/drag/action | Tunable input accessibility, controller support, haptics, remapping |
 | Collision | Capsule vs tested simplified road/building geometry | Server-validated movement, vehicles, dynamic interactions |

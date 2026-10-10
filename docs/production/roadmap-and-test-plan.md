@@ -14,17 +14,18 @@
 
 ### M1 — Acquire, verify and stage assets (in progress)
 
-**Completed so far:** queried OSM counts at `2026-10-10T16:04:36Z` for the broad envelope and `2026-10-10T16:07:35Z` for a smaller Sango QA window; saved count evidence and a limited major-road tag sample; recorded ODbL attribution. The small Sango window has 46 highway ways, 1,305 building ways and 3 amenity nodes, while shop/public-transport/marketplace tags were not returned. This is a coverage audit—not full map geometry.
+**Completed so far:** queried OSM counts at `2026-10-10T16:04:36Z` for the broad envelope and `2026-10-10T16:07:35Z` for a small Sango window; saved count evidence and a limited road-tag sample. A dated OSM/QuickOSM-derived GeoPackage (4,560 EPSG:4326 road LineStrings; snapshot `2026-09-13`) is staged with its source commit/checksum. A reproducible clip produces 46 road features in an approximately 0.8 × 1.0 km Sango core, including short Polytechnic Road and Ijokodo Road segments. A standard-library PNG preview and ODbL/provenance notes are recorded. The live count audit (1,305 building ways and 3 amenity nodes in the small window) is a separate snapshot; those features are not in the GeoPackage.
 
 **Still required:**
 
-1. Acquire a dated, manageable OSM geometry clip for the Sango corridor; record source, query/bounds, snapshot and checksum. Targeted Overpass geometry calls have timed out, so use locally processed PBF/GeoPackage or carefully split cells rather than retrying a large response.
-2. Import road lines, paths, building footprints, waterways and POIs into QGIS; check connectivity/coverage and compare against public/local references.
-3. Obtain the broad SRTM tile; record product/version/license/attribution and treat its ~30 m spacing as landform only.
-4. Confirm the playable corridor and routes with an Ibadan-local reviewer; establish the POI gaps and fictionalized business placements.
-5. Author the first proof assets in Blender: road/junction/curb segment, shopfront, gated compound and player placeholder/rig. Add licensed texture only if it closes a measured gap.
+1. Review the road clip in QGIS or another GIS and confirm the junction/road topology, clipping, and OSM tags; the current coordinate graph and PNG are only programmatic checks. Targeted Overpass geometry requests timed out; do not retry large requests without splitting/limiting them.
+2. Confirm the Sango core boundary, local names and gameplay anchors with an Ibadan-local reviewer. Keep UI/Agbowo out of the first clip: the dated source ends south of the approximate Agbowo point.
+3. Decide whether the compact first build needs a separate, licensed building/POI layer. The current source is roads only; do not present the earlier count-only buildings/amenities as imported geometry.
+4. Resolve the upstream repository's missing repository-level license and obtain legal review of ODbL attribution/share-alike treatment before public/commercial release.
+5. Obtain an SRTM tile only if broad terrain is needed; record product/version/license/attribution and treat its ~30 m spacing as landform only.
+6. Author first proof assets in Blender after geography review: road/junction/curb segment, shopfront, gated compound and player placeholder/rig. Add licensed texture only if it closes a measured gap.
 
-**Exit:** valid clipped data + provenance, approved first-area layout, at least one imported/exported asset validated in a minimal viewer, and no unresolved asset license.
+**Exit:** a GIS/local-reviewed compact layout; reproducible geometry with provenance and approved license path; and at least one imported/exported proof asset validated in a minimal viewer. No whole-city data or unverified geography is required for M1 exit.
 
 ### M2 — Browser project and third-person controller
 
@@ -34,13 +35,13 @@
 
 **Exit:** browser opens in a current Android Chrome and desktop browser; controls work; camera does not spin under joystick; player cannot pass through test wall; no real-world terrain claim yet.
 
-### M3 — Connected Sango district geometry
+### M3 — Compact connected Sango-core geometry
 
-- Import simplified real centerlines/footpaths/footprints into local coordinates.
-- Build one compact connected corridor, use original shop/compound kit, add sidewalk/drain/pole/sign/vegetation assets and one enterable vendor/contact location.
-- Add simple navigation markers and collision; test route graph connectivity and cell load/unload.
+- Convert the reviewed Sango-core road clip to local metric coordinates; add footpaths/building references only if separately sourced and checked.
+- Build one compact connected street loop around Sango T-junction, using a small original shop/compound kit and a few fictional or verified activity anchors. Do not extend to UI/Agbowo without new geometry and review.
+- Add simple navigation markers and collision; test route-graph connectivity and cell load/unload.
 
-**Exit:** player can walk a continuous, georeferenced route between at least three content points; source tags and deviations are traceable; cells load/unload without holes or memory leaks.
+**Exit:** player can walk a continuous, georeferenced route between at least three curated content points; source tags/deviations are traceable; cells load/unload without holes or memory leaks.
 
 ### M4 — Complete offline life loop
 
@@ -68,7 +69,7 @@
 
 ### M7 — Expand lives and city
 
-Add rent/room recovery, one more job, additional interiors, friend/profile/chat, trading, then limited vehicle ownership/driveability. Expand to Mokola, Bodija, Dugbe, Mapo/Oja’ba and Agodi in connected cells, each with its own geospatial source and review. Do not add full business management, police/wanted systems, public transit and wide vehicle variety before economy/anti-abuse and mobile load tests exist.
+Add rent/room recovery, one more job, additional interiors, friend/profile/chat, trading, then limited vehicle ownership/driveability. Expand from the reviewed Sango core only when the first loop and mobile budget are stable. A separately sourced/reviewed UI–Agbowo extension can be the first neighbouring area; Mokola, Bodija, Dugbe, Mapo/Oja’ba and Agodi remain later connected cells, each with its own data and local review. Do not add full business management, police/wanted systems, public transit or wide vehicle variety before economy/anti-abuse and mobile-load tests exist.
 
 ## 2. Testing plan by feature
 
