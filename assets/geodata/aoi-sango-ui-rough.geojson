@@ -1,0 +1,41 @@
+{
+  "type": "FeatureCollection",
+  "name": "Ibadan_Sango_UI_rough_research_envelope",
+  "metadata": {
+    "status": "provisional",
+    "purpose": "OSM/terrain research clip only; not an official boundary or final playable area",
+    "crs": "OGC:CRS84 (longitude, latitude)",
+    "created": "2026-10-10",
+    "reference_pins": [
+      { "name": "Sango T-junction (approximate)", "latitude": 7.4275, "longitude": 3.8803 },
+      { "name": "University of Ibadan (approximate campus reference)", "latitude": 7.4431, "longitude": 3.9022 },
+      { "name": "Agbowo (approximate neighbourhood reference)", "latitude": 7.446534, "longitude": 3.913799 }
+    ],
+    "note": "Re-snap reference pins against a dated OSM extract and verify locally before deriving runtime geometry."
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "IBL-AOI-SANGO-UI-ROUGH-001",
+        "kind": "research-envelope",
+        "name": "Sango–UI–Agbowo reference envelope",
+        "playable": false,
+        "boundary_source": "agent-authored rough bounding polygon",
+        "source_data_imported": false
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [3.872, 7.417],
+            [3.922, 7.417],
+            [3.922, 7.455],
+            [3.872, 7.455],
+            [3.872, 7.417]
+          ]
+        ]
+      }
+    }
+  ]
+}
