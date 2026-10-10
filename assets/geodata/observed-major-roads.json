@@ -1,0 +1,26 @@
+{
+  "dataset": "observed-major-road-tags",
+  "status": "metadata-only sample; no full road geometries",
+  "source": "OpenStreetMap contributors via Overpass API",
+  "osm_base_timestamp": "2026-10-10T16:04:36Z",
+  "license": "Open Database License (ODbL)",
+  "query": "way[\"highway\"~\"^(primary|trunk|secondary)$\"](7.417,3.872,7.455,3.922); out tags center;",
+  "center_warning": "Overpass center is representative for the complete OSM way and may fall outside the selected bbox. It is not a road vertex and must not be used to place road geometry.",
+  "complete_inventory": false,
+  "elements": [
+    {"type":"way","id":30045707,"center":{"lat":7.4308988,"lon":3.9030543},"tags":{"highway":"primary","name":"Oyo Road","oneway":"yes"}},
+    {"type":"way","id":30045716,"center":{"lat":7.4233575,"lon":3.8789413},"tags":{"highway":"primary","name":"Polytechnic Road","oneway":"yes"}},
+    {"type":"way","id":30045719,"center":{"lat":7.4234373,"lon":3.8789147},"tags":{"highway":"primary","name":"Polytechnic Road","oneway":"yes"}},
+    {"type":"way","id":30764960,"center":{"lat":7.4302775,"lon":3.8808695},"tags":{"highway":"secondary","name":"Ijokodo Road","source":"yahoo"}},
+    {"type":"way","id":583882723,"center":{"lat":7.4266287,"lon":3.8836366},"tags":{"highway":"secondary","name":"Ijokodo Road","oneway":"yes"}},
+    {"type":"way","id":583882725,"center":{"lat":7.4266074,"lon":3.8835933},"tags":{"highway":"secondary","name":"Ijokodo Road","oneway":"yes"}},
+    {"type":"way","id":997072921,"center":{"lat":7.436543,"lon":3.879963},"tags":{"highway":"secondary","name":"Ijokodo Road","source":"yahoo"}},
+    {"type":"way","id":997072922,"center":{"lat":7.4339246,"lon":3.8798593},"tags":{"highway":"secondary","name":"Ijokodo Road","source":"yahoo","bridge":"yes"}},
+    {"type":"way","id":230621899,"center":{"lat":7.4492011,"lon":3.9076505},"tags":{"highway":"trunk","name":"Oyo Road","ref":"A1","lanes":"2","oneway":"yes","surface":"paved","source":"yahoo"}},
+    {"type":"way","id":230621907,"center":{"lat":7.4492545,"lon":3.9077304},"tags":{"highway":"trunk","name":"Oyo Road","ref":"A1","lanes":"2","oneway":"yes","surface":"paved","source":"yahoo"}},
+    {"type":"way","id":230621904,"center":{"lat":7.4392699,"lon":3.90734},"tags":{"highway":"trunk","name":"Kenneth Dike Way","ref":"A1","lanes":"1","oneway":"yes","surface":"paved"}},
+    {"type":"way","id":230621911,"center":{"lat":7.4273305,"lon":3.9102446},"tags":{"highway":"trunk","name":"Kenneth Dike Way","ref":"A1","lanes":"2","oneway":"yes","surface":"paved"}},
+    {"type":"way","id":230621913,"center":{"lat":7.4394147,"lon":3.9072457},"tags":{"highway":"trunk","name":"Kenneth Dike Way","ref":"A1","lanes":"1","oneway":"yes","surface":"paved"}},
+    {"type":"way","id":230621914,"center":{"lat":7.4274463,"lon":3.9101964},"tags":{"highway":"trunk","name":"Kenneth Dike Way","ref":"A1","lanes":"2","oneway":"yes","surface":"paved"}}
+  ]
+}

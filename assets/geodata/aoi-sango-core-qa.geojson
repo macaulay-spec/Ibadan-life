@@ -1,0 +1,38 @@
+{
+  "type": "FeatureCollection",
+  "name": "Ibadan_Sango_core_OSM_QA_window",
+  "metadata": {
+    "status": "provisional",
+    "purpose": "small OSM coverage-check window; not an official neighbourhood or final playable boundary",
+    "crs": "OGC:CRS84 (longitude, latitude)",
+    "created": "2026-10-10",
+    "osm_base_timestamp": "2026-10-10T16:07:35Z",
+    "query_bbox_order": "south,west,north,east",
+    "query_bbox": [7.423, 3.877, 7.432, 3.884],
+    "note": "Counts are OSM features selected by bbox, not a complete geometry extract."
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "IBL-AOI-SANGO-CORE-QA-001",
+        "kind": "coverage-check-window",
+        "name": "Sango core QA window",
+        "playable": false,
+        "source_data_imported": false
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [3.877, 7.423],
+            [3.884, 7.423],
+            [3.884, 7.432],
+            [3.877, 7.432],
+            [3.877, 7.423]
+          ]
+        ]
+      }
+    }
+  ]
+}
