@@ -1,0 +1,38 @@
+{
+  "dataset": "ibadan-sango-ui-osm-coverage-counts",
+  "source": "OpenStreetMap contributors via Overpass API",
+  "license": "ODbL",
+  "created": "2026-10-10",
+  "note": "Counts only. This is not a raw or complete OSM geometry extract and does not establish feature completeness or on-the-ground existence.",
+  "broad_research_envelope": {
+    "bbox_order": "south,west,north,east",
+    "bbox": [7.417, 3.872, 7.455, 3.922],
+    "osm_base_timestamp": "2026-10-10T16:04:36Z",
+    "counts": {
+      "highway_ways": 1932,
+      "building_ways": 30063,
+      "waterway_ways": 83,
+      "amenity_nodes": 71,
+      "amenity_ways": 39,
+      "amenity_relations": 1,
+      "amenity_total": 111
+    }
+  },
+  "sango_core_qa_window": {
+    "bbox_order": "south,west,north,east",
+    "bbox": [7.423, 3.877, 7.432, 3.884],
+    "osm_base_timestamp": "2026-10-10T16:07:35Z",
+    "counts": {
+      "highway_ways": 46,
+      "building_ways": 1305,
+      "amenity_nodes": 3,
+      "amenity_ways": 0,
+      "amenity_relations": 0,
+      "amenity_total": 3,
+      "shop_total": 0,
+      "public_transport_total": 0,
+      "marketplace_total": 0
+    }
+  },
+  "source_response_copyright": "The data included in the Overpass response is from www.openstreetmap.org; ODbL."
+}

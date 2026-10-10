@@ -1,9 +1,12 @@
 # IBADAN LIFE Asset Workspace
 
-This directory starts the project asset system. It contains a **provisional AOI research polygon** and an asset/source register. It does not yet contain a finished game asset pack.
+This directory starts the project asset system. It contains **provisional research-envelope polygons**, a small OSM coverage-count audit, a metadata-only major-road sample and the asset/source register. It does not yet contain a finished game asset pack or a complete OSM geometry extract.
 
 - [`manifest.csv`](manifest.csv) is the inventory and licensing/readiness source of truth.
-- [`geodata/aoi-sango-ui-rough.geojson`](geodata/aoi-sango-ui-rough.geojson) is a hand-authored research/download envelope only; it is not a mapped district boundary and does not contain OSM roads or building data.
+- [`geodata/aoi-sango-ui-rough.geojson`](geodata/aoi-sango-ui-rough.geojson) is the broad hand-authored research/download envelope.
+- [`geodata/aoi-sango-core-qa.geojson`](geodata/aoi-sango-core-qa.geojson) is a small Sango coverage-check window.
+- [`geodata/M1_DATA_AUDIT.md`](geodata/M1_DATA_AUDIT.md) records live query counts, a sample of major-road tags, extraction failures, and the remaining M1 tasks.
+- [`geodata/osm-coverage-counts-2026-10-10.json`](geodata/osm-coverage-counts-2026-10-10.json) and [`geodata/observed-major-roads.json`](geodata/observed-major-roads.json) preserve machine-readable query evidence; neither file contains complete road geometry.
 - The acquisition, modeling, naming, optimization, and licensing rules are in [`docs/art/asset-bible.md`](../docs/art/asset-bible.md).
 - The geographic data/attribution workflow is in [`docs/research/ibadan-geographic-reference.md`](../docs/research/ibadan-geographic-reference.md).
 

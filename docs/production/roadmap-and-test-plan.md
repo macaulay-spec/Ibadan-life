@@ -6,21 +6,25 @@
 
 ## 1. Milestones
 
-### M0 — Research, design and asset plan (current)
+### M0 — Research, design and asset plan (prepared)
 
-**Prepared in this planning pass:** source-referenced Ibadan geographic reference; provisional Sango–UI–Agbowo download envelope; district layout plan; first gameplay loop; engine/backend recommendation; asset bible and asset register; test gates.
+**Prepared:** source-referenced Ibadan geographic reference; provisional Sango–UI–Agbowo envelope; district layout; first gameplay loop; engine/backend recommendation; asset bible/register; verification gates.
 
-**Exit:** all documents agree on the first district and honest offline-first scope; no unresolved source/license conflict is hidden.
+**Exit:** planning baseline and honest offline-first scope documented.
 
-### M1 — Acquire, verify and stage assets (next)
+### M1 — Acquire, verify and stage assets (in progress)
 
-1. Download a small, dated OSM source clip for the provisional envelope; record ODbL provenance and verify source legality.
-2. Import roads, paths, footprints, waterways and POIs into QGIS; check topology/coverage and compare to public/local references.
-3. Obtain broad SRTM terrain; store source/license/version and test it against known local elevation behavior.
-4. Block out exact slice boundary and walking/vehicle routes in a map viewer/editor. Ask an Ibadan-local reviewer to review the corridor and visual reference list.
-5. Author the first four proof assets in Blender: road/junction/curb segment, shopfront, gated compound, and player placeholder/rig. Add licensed texture only if it closes a measured gap.
+**Completed so far:** queried OSM counts at `2026-10-10T16:04:36Z` for the broad envelope and `2026-10-10T16:07:35Z` for a smaller Sango QA window; saved count evidence and a limited major-road tag sample; recorded ODbL attribution. The small Sango window has 46 highway ways, 1,305 building ways and 3 amenity nodes, while shop/public-transport/marketplace tags were not returned. This is a coverage audit—not full map geometry.
 
-**Exit:** valid clipped data + provenance, approved first-area layout, at least one imported/exported asset validated in a minimal viewer, no unresolved licenses.
+**Still required:**
+
+1. Acquire a dated, manageable OSM geometry clip for the Sango corridor; record source, query/bounds, snapshot and checksum. Targeted Overpass geometry calls have timed out, so use locally processed PBF/GeoPackage or carefully split cells rather than retrying a large response.
+2. Import road lines, paths, building footprints, waterways and POIs into QGIS; check connectivity/coverage and compare against public/local references.
+3. Obtain the broad SRTM tile; record product/version/license/attribution and treat its ~30 m spacing as landform only.
+4. Confirm the playable corridor and routes with an Ibadan-local reviewer; establish the POI gaps and fictionalized business placements.
+5. Author the first proof assets in Blender: road/junction/curb segment, shopfront, gated compound and player placeholder/rig. Add licensed texture only if it closes a measured gap.
+
+**Exit:** valid clipped data + provenance, approved first-area layout, at least one imported/exported asset validated in a minimal viewer, and no unresolved asset license.
 
 ### M2 — Browser project and third-person controller
 

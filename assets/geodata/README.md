@@ -1,6 +1,8 @@
 # Geodata staging
 
-`aoi-sango-ui-rough.geojson` is an agent-authored research envelope and nothing more. It contains no roads, buildings, POIs, land-cover or elevation data. The point coordinates in its metadata are approximate orientation pins and must be snapped to a dated source before use.
+`aoi-sango-ui-rough.geojson` is an agent-authored research envelope and `aoi-sango-core-qa.geojson` is a small coverage-check window. Neither is an official boundary or playable map. The OSM coverage-count JSON and road-tag sample record real query results, but contain no ordered road vertices, full building footprints, POI geometry, land-cover or elevation data. The point coordinates in the broad envelope are approximate orientation pins and must be snapped to a dated source before use.
+
+See [`M1_DATA_AUDIT.md`](M1_DATA_AUDIT.md), [`osm-coverage-counts-2026-10-10.json`](osm-coverage-counts-2026-10-10.json) and [`observed-major-roads.json`](observed-major-roads.json) for the audit and its explicit limitations.
 
 Future source-data workflow:
 

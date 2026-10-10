@@ -1,0 +1,13 @@
+[out:json][timeout:60];
+way["highway"](7.423,3.877,7.432,3.884)->.roads;
+.roads out count;
+way["building"](7.423,3.877,7.432,3.884)->.buildings;
+.buildings out count;
+nwr["amenity"](7.423,3.877,7.432,3.884)->.amenities;
+.amenities out count;
+nwr["shop"](7.423,3.877,7.432,3.884)->.shops;
+.shops out count;
+nwr["public_transport"](7.423,3.877,7.432,3.884)->.transport;
+.transport out count;
+nwr["landuse"="marketplace"](7.423,3.877,7.432,3.884)->.markets;
+.markets out count;

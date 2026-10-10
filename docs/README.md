@@ -19,7 +19,8 @@ This package turns the brief into a practical, evidence-based first milestone. I
 
 ## Decisions made for planning
 
-- **First district:** a connected corridor from Sango junction toward the University of Ibadan First Gate and Agbowo edge. Exact playable boundary remains provisional until an OSM extract and local review are checked.
+- **First district:** a connected corridor from Sango junction toward the University of Ibadan First Gate and Agbowo edge. Exact playable boundary remains provisional until an OSM geometry extract and local review are checked.
+- **M1 progress:** live Overpass count-only queries and a limited road-tag sample are recorded in `assets/geodata/M1_DATA_AUDIT.md`; no full road/building geometry or terrain file has been imported yet.
 - **First browser implementation:** TypeScript + Vite + raw Three.js (no React renderer in the game loop), with a small Rapier physics trial before committing to physics-dependent features.
 - **First playable target:** a clearly labelled offline, single-player vertical slice with a real walkable street network and one earn–spend–persist loop. It will not contain fake online players.
 - **Multiplayer path:** an authoritative TypeScript/Node room server (Colyseus is the leading candidate), plus PostgreSQL-backed persistence. Supabase is a possible auth/database host, not the authority for real-time movement or the in-game ledger.
